@@ -22,11 +22,8 @@ def draw_alive_block(life_settings, screen, x, y):
     block_size = life_settings.block_size
     x *= block_size
     y *= block_size
-    # block_center_x = x + block_size // 2
-    block_center_x = x
-    # block_center_y = y + block_size // 2
-    block_center_y = y
-    rect = (block_center_x, block_center_y, block_size, block_size)
+
+    rect = (x, y, block_size, block_size)
 
     pygame.draw.rect(screen, alive_color, rect)
 
