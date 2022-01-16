@@ -22,7 +22,7 @@ def run_game():
         if life_settings.start:
             grid = gf.update_grid(life_settings, grid)
 
-        # sleep(0.1)
+        sleep(0.1)
 
 
 run_game()

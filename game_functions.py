@@ -17,6 +17,24 @@ def create_random_grid(life_settings):
     return grid
 
 
+def regen_grid(life_settings, grid):
+    grid_width = life_settings.grid_width
+    grid_height = life_settings.grid_height
+
+    for x in range(grid_width):
+        for y in range(grid_height):
+            grid[x][y] = random.choice([0, 0, 0, 0, 0, 0, 0, 0, 0, 1])
+
+
+def clear_grid(life_settings, grid):
+    grid_width = life_settings.grid_width
+    grid_height = life_settings.grid_height
+
+    for x in range(grid_width):
+        for y in range(grid_height):
+            grid[x][y] = 0
+
+
 def draw_alive_block(life_settings, screen, x, y):
     alive_color = life_settings.alive_color
     block_size = life_settings.block_size
@@ -82,7 +100,10 @@ def check_events(life_settings, grid):
                 life_settings.start ^= 1
 
             if event.unicode == 'r':
-                grid = create_random_grid(life_settings)
+                regen_grid(life_settings, grid)
+                
+            if event.unicode == 'c':
+                clear_grid(life_settings, grid)
 
         if event.type == pygame.MOUSEBUTTONDOWN:
             if event.button == 1:
