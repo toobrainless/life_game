@@ -65,9 +65,14 @@ class LifeGame:
 
                 if event.unicode == "r":
                     self.grid.regen_grid()
+                    self.settings.is_start = 0
 
                 if event.unicode == "c":
                     self.grid.clear_grid()
+
+                if event.unicode == "g":
+                    self.grid.gen_picture()
+                    self.settings.is_start = 0
 
                 if event.unicode == "q":
                     sys.exit()
@@ -80,6 +85,7 @@ class LifeGame:
                     self.grid.change_state(x, y)
 
     def run_game(self):
+        self.grid.gen_picture()
         self.update_screen()
 
         while True:

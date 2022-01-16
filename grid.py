@@ -1,6 +1,13 @@
 import random
 
 
+def is_in_rect(x, y, x1, y1, x2, y2):
+    if x1 <= x <= x2 and y1 <= y <= y2:
+        return 1
+    else:
+        return 0
+
+
 class Grid:
     def __init__(self, grid_width, grid_height):
         self.width = grid_width
@@ -56,6 +63,40 @@ class Grid:
             new_grid.append(row)
 
         self.grid = new_grid
+
+    def gen_picture(self):
+        for x in range(self.width):
+            for y in range(self.height):
+                if is_in_rect(x, y, 10, 25, 20, 75):
+                    self.grid[x][y] = random.choice([0, 0, 1])
+                elif is_in_rect(x, y, 20, 65, 40, 75):
+                    self.grid[x][y] = random.choice([0, 0, 1])
+                elif is_in_rect(x, y, 50, 40, 60, 75):
+                    self.grid[x][y] = random.choice([0, 0, 1])
+                elif is_in_rect(x, y, 50, 25, 60, 35):
+                    self.grid[x][y] = random.choice([0, 0, 1])
+                elif is_in_rect(x, y, 70, 25, 80, 75):
+                    self.grid[x][y] = random.choice([0, 0, 1])
+                elif is_in_rect(x, y, 80, 25, 100, 35):
+                    self.grid[x][y] = random.choice([0, 0, 1])
+                elif is_in_rect(x, y, 80, 45, 90, 55):
+                    self.grid[x][y] = random.choice([0, 0, 1])
+                elif is_in_rect(x, y, 110, 25, 120, 75):
+                    self.grid[x][y] = random.choice([0, 0, 1])
+                elif is_in_rect(x, y, 120, 25, 140, 35):
+                    self.grid[x][y] = random.choice([0, 0, 1])
+                elif is_in_rect(x, y, 120, 65, 140, 75):
+                    self.grid[x][y] = random.choice([0, 0, 1])
+                elif is_in_rect(x, y, 120, 45, 130, 55):
+                    self.grid[x][y] = random.choice([0, 0, 1])
+                else:
+                    self.grid[x][y] = 0
+
+                # if y <= 24 or y >= 75:
+                #     self.grid[x][y] = 1
+                #
+                # if x <= 24 or x >= 125:
+                #     self.grid[x][y] = 1
 
     def change_state(self, x, y):
         self.grid[x][y] ^= 1

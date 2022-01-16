@@ -8,4 +8,4 @@ class Settings:
         self.grid_width = self.screen_width // self.block_size
         self.grid_height = self.screen_height // self.block_size
         self.is_start = 0
-        self.FPS = 10
+        self.FPS = 15
