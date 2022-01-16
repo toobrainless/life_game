@@ -1,5 +1,4 @@
 import pygame
-from time import sleep
 
 from settings import Settings
 import game_functions as gf
@@ -9,6 +8,8 @@ def run_game():
     pygame.init()
 
     life_settings = Settings()
+
+    clock = pygame.time.Clock()
 
     screen = pygame.display.set_mode((life_settings.screen_width, life_settings.screen_height))
     pygame.display.set_caption("Life")
@@ -22,7 +23,7 @@ def run_game():
         if life_settings.is_start:
             grid = gf.update_grid(life_settings, grid)
 
-        sleep(0.1)
+        clock.tick(life_settings.FPS)
 
 
 run_game()
