@@ -1,3 +1,4 @@
+![LIFE](https://github.com/toobrainless/life_game/blob/main/LIFE.png "LIFE")]
 # Conway's Game of Life
 
 Реализация [игры "Жизнь"](https://ru.wikipedia.org/wiki/Игра_«Жизнь») в зацикленом пространстве на Python
