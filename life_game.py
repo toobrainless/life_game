@@ -19,7 +19,6 @@ class LifeGame:
         pygame.display.set_caption("Life")
 
         self.grid = Grid(self.settings.grid_width, self.settings.grid_height)
-        # gf.update_screen(self.settings, self.screen, self.grid)
 
     def draw_alive_block(self, x, y):
         alive_color = self.settings.alive_color
@@ -54,7 +53,6 @@ class LifeGame:
         c for clear grid.
 
         press mouse button to create a block.
-
 
         """
         for event in pygame.event.get():
