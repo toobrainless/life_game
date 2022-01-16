@@ -19,7 +19,7 @@ def run_game():
     while True:
         gf.check_events(life_settings, grid)
         gf.update_screen(life_settings, screen, grid)
-        if life_settings.start:
+        if life_settings.is_start:
             grid = gf.update_grid(life_settings, grid)
 
         sleep(0.1)

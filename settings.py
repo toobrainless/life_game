@@ -7,4 +7,4 @@ class Settings:
         self.block_size = 9
         self.grid_width = self.screen_width // self.block_size
         self.grid_height = self.screen_height // self.block_size
-        self.start = 0
+        self.is_start = 0

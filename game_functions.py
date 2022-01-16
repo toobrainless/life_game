@@ -97,11 +97,11 @@ def check_events(life_settings, grid):
 
         if event.type == pygame.KEYDOWN:
             if event.unicode == 's':
-                life_settings.start ^= 1
+                life_settings.is_start ^= 1
 
             if event.unicode == 'r':
                 regen_grid(life_settings, grid)
-                
+
             if event.unicode == 'c':
                 clear_grid(life_settings, grid)
 
