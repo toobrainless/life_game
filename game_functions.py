@@ -91,6 +91,18 @@ def update_grid(life_settings, grid):
 
 
 def check_events(life_settings, grid):
+    """Interface
+
+    s for start.
+
+    r for regen grid.
+
+    c for clear grid.
+
+    press mouse button to create a block.
+
+
+    """
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
