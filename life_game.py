@@ -69,6 +69,9 @@ class LifeGame:
                 if event.unicode == "c":
                     self.grid.clear_grid()
 
+                if event.unicode == "q":
+                    sys.exit()
+
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
                     x, y = (event.pos[0] // self.settings.block_size), (
